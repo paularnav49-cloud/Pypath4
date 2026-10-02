@@ -1,10 +1,7 @@
 name: Unzip files
 
 on:
-  workflow_dispatch:        # run manually from the Actions tab
-  push:
-    paths:
-      - 'archive.zip'       # or run when the zip changes
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -15,20 +12,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Unzip to designated locations
+      - name: Unzip to repo root
         run: |
-          # Whole zip into one folder
-          unzip -o archive.zip -d output/
-
-          # Or pull specific folders/files to specific places:
-          # unzip -o archive.zip 'images/*' -d assets/
-          # unzip -o archive.zip 'src/*' -d app/
-          # unzip -o archive.zip 'docs/*' -d docs/
+          unzip -o "PyPath-source (2).zip" -d .
 
       - name: Commit extracted files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
-          git diff --cached --quiet || git commit -m "Unzip archive.zip"
+          git reset -- "PyPath-source (2).zip"
+          git diff --cached --quiet || git commit -m "Unzip PyPath-source"
           git push
