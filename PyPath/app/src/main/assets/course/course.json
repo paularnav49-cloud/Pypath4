@@ -1,0 +1,999 @@
+{
+  "id": "python-beginner",
+  "title": "Python for Beginners",
+  "schemaVersion": 1,
+  "levels": [
+    {
+      "id": "l1",
+      "number": 1,
+      "title": "Python Basics",
+      "description": "Meet Python, store values in variables, explore data types and talk to the user.",
+      "subLevels": [
+        {
+          "id": "l1s1",
+          "code": "1.1",
+          "title": "What is Python?",
+          "summary": "Your first look at Python and your very first line of code.",
+          "estimatedMinutes": 4,
+          "steps": [
+            "learn",
+            "quiz"
+          ],
+          "lesson": {
+            "pages": [
+              {
+                "title": "Meet Python",
+                "blocks": [
+                  {
+                    "type": "text",
+                    "text": "Python is a programming language — a way to give instructions to a computer using words that are close to plain English."
+                  },
+                  {
+                    "type": "bullets",
+                    "items": [
+                      "Easy to read and write",
+                      "Free and works on every computer",
+                      "Used by Google, Netflix, NASA and millions of developers"
+                    ]
+                  },
+                  {
+                    "type": "keypoint",
+                    "text": "A program is just a list of instructions the computer follows from top to bottom."
+                  }
+                ]
+              },
+              {
+                "title": "Your first program",
+                "blocks": [
+                  {
+                    "type": "text",
+                    "text": "The classic first program prints a message on the screen."
+                  },
+                  {
+                    "type": "code",
+                    "code": "print(\"Hello, World!\")",
+                    "output": "Hello, World!",
+                    "explanation": [
+                      "print is a built-in function that shows something on the screen.",
+                      "The text inside the quotes is what gets shown.",
+                      "The parentheses ( ) hold what you want to print."
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "Printing more",
+                "blocks": [
+                  {
+                    "type": "text",
+                    "text": "You can call print as many times as you like. Each call starts on a new line."
+                  },
+                  {
+                    "type": "code",
+                    "code": "print(\"I am learning Python\")\nprint(2 + 3)",
+                    "output": "I am learning Python\n5",
+                    "explanation": [
+                      "Text needs quotes.",
+                      "Numbers and maths don't — Python works out 2 + 3 for you."
+                    ]
+                  },
+                  {
+                    "type": "tip",
+                    "title": "Tip",
+                    "text": "Python reads your code line by line, starting at the top."
+                  }
+                ]
+              },
+              {
+                "title": "Comments",
+                "blocks": [
+                  {
+                    "type": "text",
+                    "text": "Lines starting with # are comments. Python ignores them — they are notes for humans."
+                  },
+                  {
+                    "type": "code",
+                    "code": "# This line is a comment\nprint(\"Comments are ignored\")  # notes can go here too",
+                    "output": "Comments are ignored",
+                    "explanation": [
+                      "Use comments to explain why your code does something."
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "quiz": {
+            "questions": [
+              {
+                "id": "l1s1q1",
+                "prompt": "What does print() do in Python?",
+                "options": [
+                  "Takes user input",
+                  "Displays output",
+                  "Creates a variable",
+                  "Ends the program"
+                ],
+                "correctIndex": 1,
+                "explanation": "print() shows whatever you put inside the parentheses on the screen."
+              },
+              {
+                "id": "l1s1q2",
+                "prompt": "What will this code display?",
+                "options": [
+                  "2 + 3",
+                  "\"5\"",
+                  "5",
+                  "Error"
+                ],
+                "correctIndex": 2,
+                "explanation": "Without quotes Python treats 2 + 3 as maths and prints the result, 5.",
+                "code": "print(2 + 3)"
+              },
+              {
+                "id": "l1s1q3",
+                "prompt": "Which symbol starts a comment in Python?",
+                "options": [
+                  "//",
+                  "#",
+                  "--",
+                  "/*"
+                ],
+                "correctIndex": 1,
+                "explanation": "In Python, everything after # on a line is a comment."
+              },
+              {
+                "id": "l1s1q4",
+                "prompt": "In what order does Python run your lines of code?",
+                "options": [
+                  "Random order",
+                  "Bottom to top",
+                  "Top to bottom",
+                  "Shortest line first"
+                ],
+                "correctIndex": 2,
+                "explanation": "Python runs instructions one after another, from the top of the file to the bottom."
+              }
+            ],
+            "passPercent": 60
+          }
+        },
+        {
+          "id": "l1s2",
+          "code": "1.2",
+          "title": "Variables",
+          "summary": "Give names to values so you can reuse them.",
+          "estimatedMinutes": 5,
+          "steps": [
+            "learn",
+            "quiz"
+          ],
+          "lesson": {
+            "pages": [
+              {
+                "title": "What is a variable?",
+                "blocks": [
+                  {
+                    "type": "text",
+                    "text": "A variable is a named box that stores a value. You create one with the equals sign ="
+                  },
+                  {
+                    "type": "code",
+                    "code": "name = \"Asha\"\nage = 21\nprint(name)\nprint(age)",
+                    "output": "Asha\n21",
+                    "explanation": [
+                      "name stores the text \"Asha\".",
+                      "age stores the number 21.",
+                      "print(name) shows the value inside the box, not the word name."
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "Changing a value",
+                "blocks": [
+                  {
+                    "type": "text",
+                    "text": "Variables can change. The newest value replaces the old one."
+                  },
+                  {
+                    "type": "code",
+                    "code": "score = 10\nscore = 15\nprint(score)",
+                    "output": "15",
+                    "explanation": [
+                      "The second line overwrites the first value.",
+                      "Only the latest value is kept."
+                    ]
+                  },
+                  {
+                    "type": "keypoint",
+                    "text": "= means \"store this value\", not \"is equal to\"."
+                  }
+                ]
+              },
+              {
+                "title": "Naming rules",
+                "blocks": [
+                  {
+                    "type": "bullets",
+                    "items": [
+                      "Use letters, numbers and underscores: user_name, level2",
+                      "Can't start with a number: 2name is not allowed",
+                      "No spaces: use first_name, not first name",
+                      "Names are case-sensitive: Age and age are different"
+                    ]
+                  },
+                  {
+                    "type": "tip",
+                    "title": "Tip",
+                    "text": "Pick names that describe the value, like total_price instead of x."
+                  }
+                ]
+              },
+              {
+                "title": "Using variables together",
+                "blocks": [
+                  {
+                    "type": "code",
+                    "code": "apples = 4\noranges = 3\ntotal = apples + oranges\nprint(total)",
+                    "output": "7",
+                    "explanation": [
+                      "Python looks up the values of apples and oranges.",
+                      "It adds them and stores the result in total."
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "quiz": {
+            "questions": [
+              {
+                "id": "l1s2q1",
+                "prompt": "Which line correctly creates a variable?",
+                "options": [
+                  "city = \"Pune\"",
+                  "\"Pune\" = city",
+                  "city == \"Pune\"",
+                  "var city = \"Pune\""
+                ],
+                "correctIndex": 0,
+                "explanation": "The variable name goes on the left, the value on the right of a single =."
+              },
+              {
+                "id": "l1s2q2",
+                "prompt": "What does this code print?",
+                "options": [
+                  "10",
+                  "15",
+                  "25",
+                  "score"
+                ],
+                "correctIndex": 1,
+                "explanation": "The second assignment replaces 10 with 15.",
+                "code": "score = 10\nscore = 15\nprint(score)"
+              },
+              {
+                "id": "l1s2q3",
+                "prompt": "Which is a valid variable name?",
+                "options": [
+                  "2fast",
+                  "my name",
+                  "user_age",
+                  "class-1"
+                ],
+                "correctIndex": 2,
+                "explanation": "Names can use letters, digits and underscores but can't start with a digit or contain spaces/hyphens."
+              },
+              {
+                "id": "l1s2q4",
+                "prompt": "What is printed?",
+                "options": [
+                  "a + b",
+                  "34",
+                  "7",
+                  "Error"
+                ],
+                "correctIndex": 2,
+                "explanation": "a is 3 and b is 4, so a + b is 7.",
+                "code": "a = 3\nb = 4\nprint(a + b)"
+              }
+            ],
+            "passPercent": 60
+          }
+        },
+        {
+          "id": "l1s3",
+          "code": "1.3",
+          "title": "Data Types",
+          "summary": "Text, whole numbers, decimals and True/False.",
+          "estimatedMinutes": 5,
+          "steps": [
+            "learn",
+            "quiz"
+          ],
+          "lesson": {
+            "pages": [
+              {
+                "title": "Every value has a type",
+                "blocks": [
+                  {
+                    "type": "text",
+                    "text": "Python keeps track of what kind of value something is. The four you'll use most:"
+                  },
+                  {
+                    "type": "bullets",
+                    "items": [
+                      "str — text, like \"hello\"",
+                      "int — whole numbers, like 42",
+                      "float — decimal numbers, like 3.14",
+                      "bool — True or False"
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "Seeing the type",
+                "blocks": [
+                  {
+                    "type": "text",
+                    "text": "Use type() to ask Python what type a value is."
+                  },
+                  {
+                    "type": "code",
+                    "code": "print(type(\"hi\"))\nprint(type(7))\nprint(type(2.5))\nprint(type(True))",
+                    "output": "<class 'str'>\n<class 'int'>\n<class 'float'>\n<class 'bool'>",
+                    "explanation": [
+                      "type() returns the kind of value.",
+                      "Don't worry about the word class yet."
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "Why types matter",
+                "blocks": [
+                  {
+                    "type": "text",
+                    "text": "The same symbol can behave differently depending on the type."
+                  },
+                  {
+                    "type": "code",
+                    "code": "print(2 + 3)\nprint(\"2\" + \"3\")",
+                    "output": "5\n23",
+                    "explanation": [
+                      "With numbers, + adds.",
+                      "With text, + joins strings together."
+                    ]
+                  },
+                  {
+                    "type": "keypoint",
+                    "text": "\"5\" (text) and 5 (number) are different things in Python."
+                  }
+                ]
+              },
+              {
+                "title": "Converting types",
+                "blocks": [
+                  {
+                    "type": "code",
+                    "code": "age_text = \"20\"\nage = int(age_text)\nprint(age + 1)",
+                    "output": "21",
+                    "explanation": [
+                      "int() turns the text \"20\" into the number 20.",
+                      "Now maths works on it. str() and float() convert too."
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "quiz": {
+            "questions": [
+              {
+                "id": "l1s3q1",
+                "prompt": "What is the type of 3.14?",
+                "options": [
+                  "int",
+                  "str",
+                  "float",
+                  "bool"
+                ],
+                "correctIndex": 2,
+                "explanation": "Numbers with a decimal point are floats."
+              },
+              {
+                "id": "l1s3q2",
+                "prompt": "What does this code print?",
+                "options": [
+                  "5",
+                  "23",
+                  "2 + 3",
+                  "Error"
+                ],
+                "correctIndex": 1,
+                "explanation": "Both values are strings, so + joins them into \"23\".",
+                "code": "print(\"2\" + \"3\")"
+              },
+              {
+                "id": "l1s3q3",
+                "prompt": "Which value is a bool?",
+                "options": [
+                  "\"True\"",
+                  "True",
+                  "1.0",
+                  "'yes'"
+                ],
+                "correctIndex": 1,
+                "explanation": "True (without quotes) is a boolean. With quotes it would be a string."
+              },
+              {
+                "id": "l1s3q4",
+                "prompt": "Which function converts \"42\" into a whole number?",
+                "options": [
+                  "str()",
+                  "float()",
+                  "type()",
+                  "int()"
+                ],
+                "correctIndex": 3,
+                "explanation": "int() converts a value to an integer (whole number)."
+              }
+            ],
+            "passPercent": 60
+          }
+        },
+        {
+          "id": "l1s4",
+          "code": "1.4",
+          "title": "Input and Output",
+          "summary": "Ask the user a question and respond to them.",
+          "estimatedMinutes": 6,
+          "steps": [
+            "learn",
+            "quiz"
+          ],
+          "lesson": {
+            "pages": [
+              {
+                "title": "Getting input",
+                "blocks": [
+                  {
+                    "type": "text",
+                    "text": "input() pauses the program and waits for the user to type something."
+                  },
+                  {
+                    "type": "code",
+                    "code": "name = input(\"What is your name? \")\nprint(\"Hello,\", name)",
+                    "output": "What is your name? Ravi\nHello, Ravi",
+                    "explanation": [
+                      "The text inside input() is the question shown to the user.",
+                      "Whatever they type is stored in name.",
+                      "print can show several things separated by commas."
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "Input is always text",
+                "blocks": [
+                  {
+                    "type": "text",
+                    "text": "Even if the user types a number, input() gives you a string."
+                  },
+                  {
+                    "type": "code",
+                    "code": "age = input(\"Age: \")\nprint(type(age))",
+                    "output": "Age: 18\n<class 'str'>"
+                  },
+                  {
+                    "type": "keypoint",
+                    "text": "Convert input with int() or float() before doing maths."
+                  }
+                ]
+              },
+              {
+                "title": "Doing maths with input",
+                "blocks": [
+                  {
+                    "type": "code",
+                    "code": "age = int(input(\"Age: \"))\nprint(\"Next year you will be\", age + 1)",
+                    "output": "Age: 18\nNext year you will be 19",
+                    "explanation": [
+                      "input() reads the text \"18\".",
+                      "int() turns it into the number 18.",
+                      "Now age + 1 works."
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "Formatting output",
+                "blocks": [
+                  {
+                    "type": "text",
+                    "text": "f-strings let you place variables directly inside text. Put f before the quotes and wrap variables in { }."
+                  },
+                  {
+                    "type": "code",
+                    "code": "name = \"Meera\"\nlevel = 1\nprint(f\"{name} is on level {level}\")",
+                    "output": "Meera is on level 1"
+                  },
+                  {
+                    "type": "tip",
+                    "title": "Tip",
+                    "text": "f-strings are the cleanest way to mix text and values."
+                  }
+                ]
+              }
+            ]
+          },
+          "quiz": {
+            "questions": [
+              {
+                "id": "l1s4q1",
+                "prompt": "What does input() return?",
+                "options": [
+                  "A number",
+                  "A string",
+                  "A bool",
+                  "Nothing"
+                ],
+                "correctIndex": 1,
+                "explanation": "input() always returns what the user typed as a string."
+              },
+              {
+                "id": "l1s4q2",
+                "prompt": "How do you turn the user's answer into a whole number?",
+                "options": [
+                  "int(input())",
+                  "input(int())",
+                  "number(input())",
+                  "input().int"
+                ],
+                "correctIndex": 0,
+                "explanation": "Wrap input() inside int() to convert the result."
+              },
+              {
+                "id": "l1s4q3",
+                "prompt": "What does this print?",
+                "options": [
+                  "{x} apples",
+                  "x apples",
+                  "5 apples",
+                  "f5 apples"
+                ],
+                "correctIndex": 2,
+                "explanation": "In an f-string, {x} is replaced with the value of x.",
+                "code": "x = 5\nprint(f\"{x} apples\")"
+              },
+              {
+                "id": "l1s4q4",
+                "prompt": "What is shown to the user by input(\"Age: \")?",
+                "options": [
+                  "Nothing",
+                  "The word input",
+                  "Age: ",
+                  "An error"
+                ],
+                "correctIndex": 2,
+                "explanation": "The text inside input() is shown as a prompt before the user types."
+              }
+            ],
+            "passPercent": 60
+          }
+        }
+      ]
+    },
+    {
+      "id": "l2",
+      "number": 2,
+      "title": "Conditions",
+      "description": "Teach your programs to make decisions with if, else and elif.",
+      "subLevels": [
+        {
+          "id": "l2s1",
+          "code": "2.1",
+          "title": "Comparisons",
+          "summary": "Compare values and get True or False.",
+          "estimatedMinutes": 4,
+          "steps": [
+            "learn",
+            "quiz"
+          ],
+          "lesson": {
+            "pages": [
+              {
+                "title": "Asking questions",
+                "blocks": [
+                  {
+                    "type": "text",
+                    "text": "Comparison operators compare two values. The answer is always True or False."
+                  },
+                  {
+                    "type": "bullets",
+                    "items": [
+                      "==  equal to",
+                      "!=  not equal to",
+                      ">  greater than",
+                      "<  less than",
+                      ">=  greater or equal",
+                      "<=  less or equal"
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "Try them",
+                "blocks": [
+                  {
+                    "type": "code",
+                    "code": "print(5 > 3)\nprint(4 == 5)\nprint(\"a\" != \"b\")",
+                    "output": "True\nFalse\nTrue",
+                    "explanation": [
+                      "5 is greater than 3, so True.",
+                      "4 is not equal to 5, so False."
+                    ]
+                  },
+                  {
+                    "type": "keypoint",
+                    "text": "== compares. A single = stores a value."
+                  }
+                ]
+              }
+            ]
+          },
+          "quiz": {
+            "questions": [
+              {
+                "id": "l2s1q1",
+                "prompt": "What does 7 >= 7 give?",
+                "options": [
+                  "True",
+                  "False",
+                  "7",
+                  "Error"
+                ],
+                "correctIndex": 0,
+                "explanation": ">= is True when the left side is greater than OR equal to the right."
+              },
+              {
+                "id": "l2s1q2",
+                "prompt": "Which operator checks if two values are equal?",
+                "options": [
+                  "=",
+                  "==",
+                  "!=",
+                  "=>"
+                ],
+                "correctIndex": 1,
+                "explanation": "== compares values; = assigns a value to a variable."
+              },
+              {
+                "id": "l2s1q3",
+                "prompt": "What is printed?",
+                "options": [
+                  "True",
+                  "False",
+                  "10",
+                  "Error"
+                ],
+                "correctIndex": 1,
+                "explanation": "10 is not less than 3, so the comparison is False.",
+                "code": "print(10 < 3)"
+              }
+            ],
+            "passPercent": 60
+          }
+        },
+        {
+          "id": "l2s2",
+          "code": "2.2",
+          "title": "if and else",
+          "summary": "Run code only when a condition is True.",
+          "estimatedMinutes": 5,
+          "steps": [
+            "learn",
+            "quiz"
+          ],
+          "lesson": {
+            "pages": [
+              {
+                "title": "The if statement",
+                "blocks": [
+                  {
+                    "type": "code",
+                    "code": "age = 20\nif age >= 18:\n    print(\"You can vote\")",
+                    "output": "You can vote",
+                    "explanation": [
+                      "The condition age >= 18 is True.",
+                      "So the indented line underneath runs.",
+                      "Notice the colon : at the end of the if line."
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "Indentation matters",
+                "blocks": [
+                  {
+                    "type": "text",
+                    "text": "Python uses indentation (4 spaces) to know which lines belong to the if."
+                  },
+                  {
+                    "type": "tip",
+                    "title": "Watch out",
+                    "text": "Forgetting the colon or the indentation is the most common beginner error."
+                  }
+                ]
+              },
+              {
+                "title": "Adding else",
+                "blocks": [
+                  {
+                    "type": "code",
+                    "code": "temp = 15\nif temp > 25:\n    print(\"It's hot\")\nelse:\n    print(\"It's cool\")",
+                    "output": "It's cool",
+                    "explanation": [
+                      "15 > 25 is False, so the if block is skipped.",
+                      "The else block runs instead."
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "quiz": {
+            "questions": [
+              {
+                "id": "l2s2q1",
+                "prompt": "What must end an if line?",
+                "options": [
+                  "A semicolon ;",
+                  "A colon :",
+                  "A period .",
+                  "Nothing"
+                ],
+                "correctIndex": 1,
+                "explanation": "Every if, else and elif line ends with a colon."
+              },
+              {
+                "id": "l2s2q2",
+                "prompt": "What is printed?",
+                "options": [
+                  "Big",
+                  "Small",
+                  "Big and Small",
+                  "Nothing"
+                ],
+                "correctIndex": 1,
+                "explanation": "3 > 10 is False, so the else branch runs.",
+                "code": "n = 3\nif n > 10:\n    print(\"Big\")\nelse:\n    print(\"Small\")"
+              },
+              {
+                "id": "l2s2q3",
+                "prompt": "How does Python know which lines belong to an if?",
+                "options": [
+                  "Curly braces { }",
+                  "Indentation",
+                  "The word end",
+                  "Line numbers"
+                ],
+                "correctIndex": 1,
+                "explanation": "Python groups code by indentation, usually 4 spaces."
+              }
+            ],
+            "passPercent": 60
+          }
+        },
+        {
+          "id": "l2s3",
+          "code": "2.3",
+          "title": "elif",
+          "summary": "Check several conditions in order.",
+          "estimatedMinutes": 5,
+          "steps": [
+            "learn",
+            "quiz"
+          ],
+          "lesson": {
+            "pages": [
+              {
+                "title": "More than two choices",
+                "blocks": [
+                  {
+                    "type": "text",
+                    "text": "elif (short for else if) lets you test another condition when the first one is False."
+                  },
+                  {
+                    "type": "code",
+                    "code": "marks = 72\nif marks >= 90:\n    print(\"Grade A\")\nelif marks >= 60:\n    print(\"Grade B\")\nelse:\n    print(\"Keep practising\")",
+                    "output": "Grade B",
+                    "explanation": [
+                      "72 >= 90 is False, so Python moves on.",
+                      "72 >= 60 is True — Grade B is printed.",
+                      "Once a branch runs, the rest are skipped."
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "Order matters",
+                "blocks": [
+                  {
+                    "type": "keypoint",
+                    "text": "Python checks conditions from top to bottom and runs only the first one that is True."
+                  },
+                  {
+                    "type": "tip",
+                    "title": "Tip",
+                    "text": "Put the most specific condition first."
+                  }
+                ]
+              }
+            ]
+          },
+          "quiz": {
+            "questions": [
+              {
+                "id": "l2s3q1",
+                "prompt": "What does elif mean?",
+                "options": [
+                  "else if",
+                  "end if",
+                  "elevate if",
+                  "either if"
+                ],
+                "correctIndex": 0,
+                "explanation": "elif is short for else if."
+              },
+              {
+                "id": "l2s3q2",
+                "prompt": "What is printed?",
+                "options": [
+                  "High",
+                  "Medium",
+                  "Low",
+                  "High and Medium"
+                ],
+                "correctIndex": 1,
+                "explanation": "50 > 80 is False; 50 > 30 is True, so Medium prints and the rest are skipped.",
+                "code": "x = 50\nif x > 80:\n    print(\"High\")\nelif x > 30:\n    print(\"Medium\")\nelse:\n    print(\"Low\")"
+              },
+              {
+                "id": "l2s3q3",
+                "prompt": "How many branches of an if/elif/else chain can run?",
+                "options": [
+                  "All of them",
+                  "Exactly one at most",
+                  "Two",
+                  "None ever"
+                ],
+                "correctIndex": 1,
+                "explanation": "Only the first branch whose condition is True runs (or else if none are)."
+              }
+            ],
+            "passPercent": 60
+          }
+        }
+      ]
+    },
+    {
+      "id": "l3",
+      "number": 3,
+      "title": "Loops",
+      "description": "Repeat actions with for and while loops.",
+      "available": false,
+      "subLevels": [
+        {
+          "id": "l3s1",
+          "code": "3.1",
+          "title": "for loops",
+          "summary": "Repeat over a range.",
+          "steps": [
+            "learn",
+            "quiz"
+          ]
+        },
+        {
+          "id": "l3s2",
+          "code": "3.2",
+          "title": "while loops",
+          "summary": "Repeat until a condition changes.",
+          "steps": [
+            "learn",
+            "quiz"
+          ]
+        },
+        {
+          "id": "l3s3",
+          "code": "3.3",
+          "title": "break and continue",
+          "summary": "Control the flow of loops.",
+          "steps": [
+            "learn",
+            "quiz"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l4",
+      "number": 4,
+      "title": "Functions",
+      "description": "Package code into reusable building blocks.",
+      "available": false,
+      "subLevels": [
+        {
+          "id": "l4s1",
+          "code": "4.1",
+          "title": "Defining functions",
+          "summary": "Write your own functions.",
+          "steps": [
+            "learn",
+            "quiz"
+          ]
+        },
+        {
+          "id": "l4s2",
+          "code": "4.2",
+          "title": "Parameters",
+          "summary": "Pass values in.",
+          "steps": [
+            "learn",
+            "quiz"
+          ]
+        },
+        {
+          "id": "l4s3",
+          "code": "4.3",
+          "title": "Return values",
+          "summary": "Send results back.",
+          "steps": [
+            "learn",
+            "quiz"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "l5",
+      "number": 5,
+      "title": "Lists",
+      "description": "Store many values in a single variable.",
+      "available": false,
+      "subLevels": [
+        {
+          "id": "l5s1",
+          "code": "5.1",
+          "title": "Creating lists",
+          "summary": "Square-bracket basics.",
+          "steps": [
+            "learn",
+            "quiz"
+          ]
+        },
+        {
+          "id": "l5s2",
+          "code": "5.2",
+          "title": "Indexing",
+          "summary": "Access items by position.",
+          "steps": [
+            "learn",
+            "quiz"
+          ]
+        },
+        {
+          "id": "l5s3",
+          "code": "5.3",
+          "title": "List methods",
+          "summary": "append, remove and more.",
+          "steps": [
+            "learn",
+            "quiz"
+          ]
+        }
+      ]
+    }
+  ]
+}
