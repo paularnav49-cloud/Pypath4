@@ -14,7 +14,7 @@ jobs:
 
       - name: Unzip to repo root
         run: |
-          unzip -o "PyPath-source (2).zip" -d .
+          unzip -o "PyPath-source.zip" -d .
 
       - name: Commit extracted files
         run: |
