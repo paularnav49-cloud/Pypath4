@@ -2,8 +2,6 @@ name: Build APK
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ main ]
 
 jobs:
   build:
@@ -16,13 +14,21 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - name: Make gradlew executable
-        run: chmod +x ./gradlew
+      - name: Show project files
+        run: find . -maxdepth 3 -not -path './.git/*'
 
       - name: Build debug APK
-        run: ./gradlew assembleDebug
+        run: |
+          G=$(find . -name gradlew -not -path './.git/*' | head -n1)
+          if [ -z "$G" ]; then
+            echo "No gradlew found. Not a Gradle Android project, or the zip isn't unzipped yet."
+            exit 1
+          fi
+          cd "$(dirname "$G")"
+          chmod +x gradlew
+          ./gradlew assembleDebug
 
       - uses: actions/upload-artifact@v4
         with:
           name: app-debug-apk
-          path: app/build/outputs/apk/debug/*.apk
+          path: "**/build/outputs/apk/debug/*.apk"
