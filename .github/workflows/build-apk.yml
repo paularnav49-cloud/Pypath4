@@ -3,6 +3,9 @@ name: Build APK
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,7 +31,14 @@ jobs:
           chmod +x gradlew
           ./gradlew assembleDebug
 
-      - uses: actions/upload-artifact@v4
+      - name: Find APK
+        id: apk
+        run: echo "path=$(find . -path '*build/outputs/apk/debug/*.apk' | head -n1)" >> $GITHUB_OUTPUT
+
+      - name: Publish APK as release
+        uses: softprops/action-gh-release@v2
         with:
-          name: app-debug-apk
-          path: "**/build/outputs/apk/debug/*.apk"
+          tag_name: build-${{ github.run_number }}
+          files: ${{ steps.apk.outputs.path }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
